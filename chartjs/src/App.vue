@@ -1,17 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <Hello msg="Welcome to Your Vue.js App" />
+  <Count></Count>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+// Composition Style
+import HelloWorld from "./components/HelloWorld.vue";
+import CountButton from "./components/CountButton.vue";
+import { ref } from "vue";
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+const Hello = ref(HelloWorld);
+const Count = ref(CountButton);
+
+// Options Style
+// export default {
+//   name: 'App',
+//   components: {
+//     HelloWorld
+//   }
+// }
 </script>
 
 <style>
