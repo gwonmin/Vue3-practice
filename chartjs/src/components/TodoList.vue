@@ -15,7 +15,44 @@
   </button>
 </template>
 
-<script setup>
+<!-- Options -->
+<script>
+//to give each todo a unique id
+let id = 0;
+
+export default {
+  data() {
+    return {
+      newTodo: "",
+      hideCompleted: false,
+      todos: [
+        { id: id++, text: "Learn HTML", done: true },
+        { id: id++, text: "Learn Java", done: false },
+      ],
+    };
+  },
+
+  computed: {
+    filteredTodos() {
+      return this.hideCompleted ? this.todos.filter(t => !t.done) : this.todos;
+    },
+  },
+
+  methods: {
+    addTodo() {
+      this.todos.push({ id: id++, text: this.newTodo });
+      this.newTodo = "";
+    },
+
+    removeTodo(todo) {
+      this.todos = this.todos.filter(t => t !== todo);
+    },
+  },
+};
+</script>
+
+<!-- Composition -->
+<!-- <script setup>
 import { ref, computed } from "vue";
 
 // to give each todo a unique id
@@ -41,7 +78,7 @@ function addTodo() {
 function removeTodo(todo) {
   todos.value = todos.value.filter((t) => t !== todo);
 }
-</script>
+</script> -->
 
 <style>
 .done {

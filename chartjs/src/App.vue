@@ -8,16 +8,29 @@
   <OnMount></OnMount>
 </template>
 
-<script setup>
 // Options Style
-// export default {
-//   name: 'App',
-//   components: {
-//     HelloWorld
-//   }
-// }
+<!-- <script>
+import Hello from "./components/HelloWorld.vue";
+import Count from "./components/CountButton.vue";
+import Input from "./components/InputBox.vue";
+import Toggle from "./components/ToggleButton.vue";
+import Todo from "./components/TodoList.vue";
+import OnMount from "./components/OnMounted.vue";
+
+export default {
+  name: "App",
+  components: {
+    Hello,
+    Count,
+    Input,
+    Toggle,
+    Todo,
+    OnMount,
+  },
+}; -->
 
 // Composition Style
+<script setup>
 import { ref } from "vue";
 
 import HelloWorld from "./components/HelloWorld.vue";

@@ -4,6 +4,23 @@
   <h1 v-else>Wow</h1>
 </template>
 
+<!-- Options -->
+<!-- <script>
+export default {
+  data() {
+    return {
+      awesome: true,
+    };
+  },
+  methods: {
+    toggle() {
+      this.awesome = !this.awesome;
+    },
+  },
+};
+</script> -->
+
+<!-- Composition -->
 <script setup>
 import { ref } from "vue";
 

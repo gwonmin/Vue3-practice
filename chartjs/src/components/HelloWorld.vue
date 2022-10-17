@@ -1,10 +1,21 @@
 <template>
-  <div class="hello">
+  <div>
     <h1>{{ HelloWorld }}</h1>
   </div>
 </template>
 
-<!-- Composition style -->
+// Options style
+<!-- <script>
+export default {
+  data() {
+    const HelloWorld = "HelloWorld";
+
+    return { HelloWorld };
+  },
+};
+</script> -->
+
+<!-- Composition Style -->
 <script setup>
 import { ref } from "vue";
 
