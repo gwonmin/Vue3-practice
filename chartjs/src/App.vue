@@ -6,6 +6,7 @@
   <Toggle></Toggle>
   <Todo></Todo>
   <OnMount></OnMount>
+  <Random></Random>
 </template>
 
 // Options Style
@@ -16,6 +17,7 @@ import Input from "./components/InputBox.vue";
 import Toggle from "./components/ToggleButton.vue";
 import Todo from "./components/TodoList.vue";
 import OnMount from "./components/OnMounted.vue";
+import Random from "./components/RandomTodo.vue";
 
 export default {
   name: "App",
@@ -26,6 +28,7 @@ export default {
     Toggle,
     Todo,
     OnMount,
+    Random,
   },
 }; -->
 
@@ -39,6 +42,7 @@ import InputBox from "./components/InputBox.vue";
 import ToggleButton from "./components/ToggleButton.vue";
 import TodoList from "./components/TodoList.vue";
 import OnMounted from "./components/OnMounted.vue";
+import RandomTodo from "./components/RandomTodo.vue";
 
 const Hello = ref(HelloWorld);
 const Count = ref(CountButton);
@@ -46,14 +50,14 @@ const Input = ref(InputBox);
 const Toggle = ref(ToggleButton);
 const Todo = ref(TodoList);
 const OnMount = ref(OnMounted);
+const Random = ref(RandomTodo);
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  margin-top: 20px;
+.Count {
+  color: blue;
+}
+.Hello {
+  color: blue;
 }
 </style>
