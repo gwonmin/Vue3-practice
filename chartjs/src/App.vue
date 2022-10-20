@@ -1,18 +1,44 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <h1>Use Props =></h1>
-  <Hello :msg="greeting" />
-  <h1>Use Slots =></h1>
-  <Hello>Message: {{ msg }}</Hello>
-  <Count></Count>
-  <Input></Input>
-  <Toggle></Toggle>
-  <Todo></Todo>
-  <OnMount></OnMount>
-  <Random></Random>
-  <Emit @response="msg => (childMsg = msg)"></Emit>
-  <p>{{ childMsg }}</p>
-  <Congras></Congras>
+  <div id="nav">
+    <router-link to="/">
+      <button>Home</button>
+    </router-link>
+
+    <router-link to="/count">
+      <button>Count</button>
+    </router-link>
+
+    <router-link to="/input">
+      <button>Input</button>
+    </router-link>
+
+    <router-link to="/toggle">
+      <button>Toggle</button>
+    </router-link>
+
+    <router-link to="/todo">
+      <button>Todo</button>
+    </router-link>
+
+    <router-link to="/onmount">
+      <button>OnMount</button>
+    </router-link>
+
+    <router-link to="/random">
+      <button>Random</button>
+    </router-link>
+
+    <router-link to="/congras">
+      <button>Congras</button>
+    </router-link>
+
+    <router-link to="/handlinginput">
+      <button>HandlingInput</button>
+    </router-link>
+  </div>
+  <router-view />
+  <!-- <Emit @response="msg => (childMsg = msg)"></Emit>
+  <p>{{ childMsg }}</p> -->
 </template>
 
 // Options Style
@@ -52,21 +78,24 @@ export default {
 
 // Composition Style
 <script setup>
-import { ref } from "vue";
+// import { ref } from "vue";
 
-import Hello from "./components/HelloWorld.vue";
-import Count from "./components/CountButton.vue";
-import Input from "./components/InputBox.vue";
-import Toggle from "./components/ToggleButton.vue";
-import Todo from "./components/TodoList.vue";
-import OnMount from "./components/OnMounted.vue";
-import Random from "./components/RandomTodo.vue";
-import Emit from "./components/EmitText.vue";
-import Congras from "./components/CongrasThing.vue";
+// import Hello from "./components/HelloWorld.vue";
+// import Count from "./components/CountButton.vue";
+// import Input from "./components/InputBox.vue";
+// import Toggle from "./components/ToggleButton.vue";
+// import Todo from "./components/TodoList.vue";
+// import OnMount from "./components/OnMounted.vue";
+// import Random from "./components/RandomTodo.vue";
+// import Emit from "./components/EmitText.vue";
+// import Congras from "./components/CongrasThing.vue";
+// import HandlingInput from "./components/HandlingInput.vue";
 
-const greeting = ref("Hello from parent");
-const childMsg = ref("No child msg yet");
-const msg = ref("from parent");
+// const greeting = ref("Hello from parent");
+// const childMsg = ref("No child msg yet");
 </script>
-
-<style></style>
+<style>
+div {
+  align-content: flex-end;
+}
+</style>

@@ -1,6 +1,7 @@
 <!-- Props 테스트 -->
 <template>
   <div>
+    <img alt="Vue logo" src="../assets/logo.png" />
     <h1>{{ props.msg || HelloWorld }}</h1>
     <slot>Fallback content</slot>
   </div>
