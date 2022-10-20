@@ -1,6 +1,8 @@
 <!--
 This example demonstrates handling user input with the v-on directive.
 -->
+// Yup 유효성 검사 넣기
+
 <template>
   <h1 class="msg">{{ msg }}</h1>
   <button @click="reverseMsg">Reverse Message</button>

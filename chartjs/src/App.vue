@@ -77,25 +77,26 @@ export default {
 </script> -->
 
 // Composition Style
-<script setup>
-// import { ref } from "vue";
+<!-- <script setup>
+import { ref } from "vue";
 
-// import Hello from "./components/HelloWorld.vue";
-// import Count from "./components/CountButton.vue";
-// import Input from "./components/InputBox.vue";
-// import Toggle from "./components/ToggleButton.vue";
-// import Todo from "./components/TodoList.vue";
-// import OnMount from "./components/OnMounted.vue";
-// import Random from "./components/RandomTodo.vue";
-// import Emit from "./components/EmitText.vue";
-// import Congras from "./components/CongrasThing.vue";
-// import HandlingInput from "./components/HandlingInput.vue";
+import Hello from "./components/HelloWorld.vue";
+import Count from "./components/CountButton.vue";
+import Input from "./components/InputBox.vue";
+import Toggle from "./components/ToggleButton.vue";
+import Todo from "./components/TodoList.vue";
+import OnMount from "./components/OnMounted.vue";
+import Random from "./components/RandomTodo.vue";
+import Emit from "./components/EmitText.vue";
+import Congras from "./components/CongrasThing.vue";
+import HandlingInput from "./components/HandlingInput.vue";
 
-// const greeting = ref("Hello from parent");
-// const childMsg = ref("No child msg yet");
-</script>
+const greeting = ref("Hello from parent");
+const childMsg = ref("No child msg yet");
+
+</script> -->
 <style>
 div {
-  align-content: flex-end;
+  align-content: center;
 }
 </style>
