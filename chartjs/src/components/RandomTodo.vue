@@ -5,8 +5,8 @@
   <pre v-else>{{ todoData }}</pre>
 </template>
 
-<script>
 // Options
+<!-- <script>
 export default {
   data() {
     return {
@@ -35,12 +35,26 @@ export default {
     },
   },
 };
-</script>
+</script> -->
 
 // Composition
+<script setup>
+import { ref, watch } from "vue";
 
-<style>
-.button {
-  margin: right;
+const todoId = ref(1);
+const todoData = ref(null);
+
+async function fetchData() {
+  todoData.value = null;
+  const res = await fetch(
+    `https://jsonplaceholder.typicode.com/todos/${todoId.value}`
+  );
+  todoData.value = await res.json();
 }
-</style>
+
+fetchData();
+
+watch(todoId, fetchData);
+</script>
+
+<style></style>

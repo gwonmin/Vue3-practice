@@ -1,12 +1,18 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <Hello msg="Welcome to Your Vue.js App" />
+  <h1>Use Props =></h1>
+  <Hello :msg="greeting" />
+  <h1>Use Slots =></h1>
+  <Hello>Message: {{ msg }}</Hello>
   <Count></Count>
   <Input></Input>
   <Toggle></Toggle>
   <Todo></Todo>
   <OnMount></OnMount>
   <Random></Random>
+  <Emit @response="msg => (childMsg = msg)"></Emit>
+  <p>{{ childMsg }}</p>
+  <Congras></Congras>
 </template>
 
 // Options Style
@@ -18,6 +24,8 @@ import Toggle from "./components/ToggleButton.vue";
 import Todo from "./components/TodoList.vue";
 import OnMount from "./components/OnMounted.vue";
 import Random from "./components/RandomTodo.vue";
+import Emit from "./components/EmitText.vue";
+import Congras from "./components/CongrasThing.vue";
 
 export default {
   name: "App",
@@ -29,35 +37,36 @@ export default {
     Todo,
     OnMount,
     Random,
+    Emit,
+    Congras,
   },
-}; -->
+  data() {
+    return {
+      greeting: "Hello from parent",
+      childMsg: "No child msg yet",
+      msg: "from parent",
+    };
+  },
+};
+</script> -->
 
 // Composition Style
 <script setup>
 import { ref } from "vue";
 
-import HelloWorld from "./components/HelloWorld.vue";
-import CountButton from "./components/CountButton.vue";
-import InputBox from "./components/InputBox.vue";
-import ToggleButton from "./components/ToggleButton.vue";
-import TodoList from "./components/TodoList.vue";
-import OnMounted from "./components/OnMounted.vue";
-import RandomTodo from "./components/RandomTodo.vue";
+import Hello from "./components/HelloWorld.vue";
+import Count from "./components/CountButton.vue";
+import Input from "./components/InputBox.vue";
+import Toggle from "./components/ToggleButton.vue";
+import Todo from "./components/TodoList.vue";
+import OnMount from "./components/OnMounted.vue";
+import Random from "./components/RandomTodo.vue";
+import Emit from "./components/EmitText.vue";
+import Congras from "./components/CongrasThing.vue";
 
-const Hello = ref(HelloWorld);
-const Count = ref(CountButton);
-const Input = ref(InputBox);
-const Toggle = ref(ToggleButton);
-const Todo = ref(TodoList);
-const OnMount = ref(OnMounted);
-const Random = ref(RandomTodo);
+const greeting = ref("Hello from parent");
+const childMsg = ref("No child msg yet");
+const msg = ref("from parent");
 </script>
 
-<style>
-.Count {
-  color: blue;
-}
-.Hello {
-  color: blue;
-}
-</style>
+<style></style>

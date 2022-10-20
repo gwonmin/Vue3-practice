@@ -1,6 +1,8 @@
+<!-- Props 테스트 -->
 <template>
   <div>
-    <h1>{{ HelloWorld }}</h1>
+    <h1>{{ props.msg || HelloWorld }}</h1>
+    <slot>Fallback content</slot>
   </div>
 </template>
 
@@ -12,15 +14,26 @@ export default {
 
     return { HelloWorld };
   },
+
+  props: {
+    msg: String,
+  },
 };
 </script> -->
 
 <!-- Composition Style -->
 <script setup>
-import { ref } from "vue";
+import { ref, defineProps } from "vue";
+const HelloWorld = ref("Hellow Vue3");
 
-const HelloWorld = ref("HelloWorld");
+const props = defineProps({
+  msg: String,
+});
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style></style>
+<style>
+div {
+  align-items: center;
+}
+</style>
