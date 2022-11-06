@@ -1,5 +1,18 @@
 <template>
+  <div class="container text-center">
+    <h1 class="title">This is el+ table</h1>
+  </div>
+
   <div class="about">
-    <h1>This is an about page</h1>
+    <elplus-table></elplus-table>
   </div>
 </template>
+<script>
+import ElplusTable from "@/components/ElplusTable.vue";
+
+export default {
+  components: {
+    ElplusTable,
+  },
+};
+</script>
