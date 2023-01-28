@@ -1,5 +1,24 @@
-# Vue3-practice
+# elementplus
 
-npm install -g @vue3/clis
+## Project setup
+```
+npm install
+```
 
-vue create 프로젝트명
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

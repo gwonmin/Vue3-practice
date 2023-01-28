@@ -7,12 +7,6 @@
     <elplus-table></elplus-table>
   </div>
 </template>
-<script>
+<script setup>
 import ElplusTable from "@/components/ElplusTable.vue";
-
-export default {
-  components: {
-    ElplusTable,
-  },
-};
 </script>
